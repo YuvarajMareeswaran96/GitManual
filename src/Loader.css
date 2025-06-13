@@ -1,0 +1,152 @@
+/* Earth loader container */
+.earth {
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Connecting text */
+.earth p {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Earth circle animation */
+.earth-loader {
+  --watercolor: #3344c1;
+  --landcolor: #7cc133;
+  width: 7.5em;
+  height: 7.5em;
+  background-color: var(--watercolor);
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 0.15em white;
+  box-shadow:
+    inset 0em 0.5em rgba(255, 255, 255, 0.25),
+    inset 0em -0.5em rgba(0, 0, 0, 0.25);
+  animation: startround 1s;
+  animation-iteration-count: 1;
+}
+
+/* SVG paths inside the earth loader */
+.earth-loader svg {
+  width: 7em;
+  height: auto;
+  position: absolute;
+}
+
+/* Individual path animations */
+.earth-loader svg:nth-child(1) {
+  bottom: -2em;
+  animation: round1 5s infinite linear 0.75s;
+}
+
+.earth-loader svg:nth-child(2) {
+  top: -3em;
+  animation: round1 5s infinite linear;
+}
+
+.earth-loader svg:nth-child(3) {
+  top: -2.5em;
+  animation: round2 5s infinite linear;
+}
+
+.earth-loader svg:nth-child(4) {
+  bottom: -2.2em;
+  animation: round2 5s infinite linear 0.75s;
+}
+
+/* Bright flash intro */
+@keyframes startround {
+  0% {
+    filter: brightness(500%);
+    box-shadow: none;
+  }
+  75% {
+    filter: brightness(500%);
+    box-shadow: none;
+  }
+  100% {
+    filter: brightness(100%);
+    box-shadow:
+      inset 0em 0.5em rgba(255, 255, 255, 0.25),
+      inset 0em -0.5em rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Floating animation pattern 1 */
+@keyframes round1 {
+  0% {
+    left: -2em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+  30% {
+    left: -6em;
+    opacity: 100%;
+    transform: skewX(-25deg) rotate(25deg);
+  }
+  31% {
+    left: -6em;
+    opacity: 0%;
+  }
+  35% {
+    left: 7em;
+    opacity: 0%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  45% {
+    left: 7em;
+    opacity: 100%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  100% {
+    left: -2em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+}
+
+/* Floating animation pattern 2 */
+@keyframes round2 {
+  0% {
+    left: 5em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+  75% {
+    left: -7em;
+    opacity: 100%;
+    transform: skewX(-25deg) rotate(25deg);
+  }
+  76% {
+    left: -7em;
+    opacity: 0%;
+  }
+  77% {
+    left: 8em;
+    opacity: 0%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  80% {
+    left: 8em;
+    opacity: 100%;
+    transform: skewX(25deg) rotate(-25deg);
+  }
+  100% {
+    left: 5em;
+    opacity: 100%;
+    transform: skewX(0deg) rotate(0deg);
+  }
+}

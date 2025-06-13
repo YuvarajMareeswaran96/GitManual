@@ -1,0 +1,219 @@
+/* ========== GLOBAL STYLES ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== DARK BACKGROUND & WRAPPER ========== */
+.guide-wrapper {
+  min-height: 100vh;
+  background: #121212;
+  color: #E0E0E0;
+  padding: 2rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ========== MAIN CONTAINER ========== */
+.guide-container {
+  width: 100%;
+  max-width: 1800px;
+  min-width: 280px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  padding: 2rem 3rem;
+  opacity: 1;
+  transition: box-shadow 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== HEADINGS ========== */
+.guide-container h1 {
+  font-size: clamp(2rem, 5vw, 45px);
+  text-align: center;
+  color: #1E90FF;
+  transition: text-shadow 0.3s ease;
+  cursor: default;
+  margin-bottom: 1rem;
+}
+
+.guide-container h2 {
+  font-size: clamp(1.3rem, 3vw, 28px);
+  color: #1E90FF;
+  transition: text-shadow 0.3s ease;
+  cursor: default;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.guide-container h1:hover,
+.guide-container h2:hover {
+  text-shadow: 0 0 12px #1E90FF;
+}
+
+/* ========== ICONS ========== */
+.icon {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: #FF8C00;
+  font-size: 2.2rem;
+}
+
+.inline-icon {
+  vertical-align: middle;
+  margin-left: 0.3rem;
+  color: #1E90FF;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+a:hover .inline-icon {
+  transform: scale(1.2);
+  color: #2E8B57;
+}
+
+/* ========== LINKS ========== */
+a {
+  color: #1E90FF;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #2E8B57;
+  text-shadow: 0 0 8px #1E90FF;
+}
+
+/* ========== IMAGES ========== */
+.inline-image {
+  max-width: 10%;
+  height: auto;
+  margin: 0.5rem 0;
+  display: block;
+  filter: brightness(1.1);
+}
+
+/* ========== TEXT & PARAGRAPHS ========== */
+.guide-container p,
+.guide-container li,
+.guide-container em {
+  color: #E0E0E0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.credits {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+/* ========== LISTS ========== */
+.guide-container ol,
+.guide-container ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ol li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+code.cmd {
+  color: #7bff00;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.inline-image {
+  width: 120px;
+  height: auto;
+  margin: 0.5rem 0;
+  display: block; /* ensures it stacks well */
+}
+
+
+
+/* ========== CODE BLOCKS ========== */
+code {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.95rem;
+}
+
+pre {
+  background: #2d2d2d;
+  color: #00FF99;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1rem;
+  margin: 1rem 0;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+/* Scrollbar styling */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: #1E90FF;
+  border-radius: 4px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .guide-wrapper {
+    padding: 1rem 1.2rem;
+  }
+
+  .guide-container {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .guide-container p,
+  .guide-container li {
+    font-size: 0.95rem;
+  }
+
+  code,
+  pre {
+    font-size: 0.85rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}

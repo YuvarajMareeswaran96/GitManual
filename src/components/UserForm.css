@@ -1,0 +1,116 @@
+/* src/components/UserForm.css */
+.user-form__container {
+  --neon-green: #39ff14;
+  --neon-pink: #ff00ff;
+  --neon-blue: #00ffff;
+  --neon-purple: #b200ff;
+  --background-dark: #121212;
+  --input-bg: #1e1e1e;
+  --input-border: #2ecc71;
+  --button-bg: #2ecc71;
+  --button-hover-bg: #27ae60;
+  --text-color: #f0f0f0;
+  --shadow-glow: 0 0 5px rgba(46, 204, 113, 0.6);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-dark);
+  z-index: 1000; /* Only if this should overlay other content */
+}
+
+.user-form__wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.user-form__title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--neon-blue);
+  text-align: center;
+  text-shadow: 0 0 4px rgba(0, 255, 255, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.user-form__group {
+  margin-bottom: 10px;
+}
+
+.user-form__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-form__input {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-form__input::placeholder {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.user-form__input:focus {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.user-form__button {
+  width: 100%;
+  background: var(--button-bg);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-form__button:hover {
+  background: var(--button-hover-bg);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .user-form__wrapper {
+    padding: 20px;
+  }
+  
+  .user-form__title {
+    font-size: 1.5rem;
+  }
+}
