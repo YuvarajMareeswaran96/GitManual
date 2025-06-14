@@ -22,6 +22,8 @@ import CarouselComponentPR from "./Carousel_ComponentPR";
 import CarouselComponentWB from "./Carousel_ComponentWB";
 import CarouselComponentCT from "./Carousel_ComponentCT";
 import CarouselComponentDPD from "./Carousel_ComponentDPD";
+import CarouselComponentDA from "./Carousel_ComponentDA";
+import CarouselComponentPA from "./Carousel_ComponentPA";
 
 // Placeholder images URLs (replace with your own images or local imports)
 const gitLogo =
@@ -383,9 +385,11 @@ export default function GitGuide() {
               <FaSyncAlt /> Fetch and Pull Latest Changes:
             </b>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-            <li>Open your Visual Studio solution.</li>
-            <li>Switch to the "main" branch and click "Fetch" and "Pull" to update
-            your local copy.</li>
+              <li>Open your Visual Studio solution.</li>
+              <li>
+                Switch to the "main" branch and click "Fetch" and "Pull" to
+                update your local copy.
+              </li>
             </ul>
           </li>
           <li>
@@ -394,10 +398,16 @@ export default function GitGuide() {
             </b>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
               <li>Switch to your working branch.</li>
-              <li>Click the three dots (…) in the right corner and select “Open in Command Prompt”</li>
+              <li>
+                Click the three dots (…) in the right corner and select “Open in
+                Command Prompt”
+              </li>
               <li>Open Command Prompt from Visual Studio and run:</li>
               <pre>git pull origin main</pre>
-              <li>This command pulls the latest changes from the main branch into your current working branch.</li>
+              <li>
+                This command pulls the latest changes from the main branch into
+                your current working branch.
+              </li>
               <li>Resolve any conflicts if prompted.</li>
             </ul>
           </li>
@@ -406,9 +416,15 @@ export default function GitGuide() {
               <FaCheckCircle /> Check for Updates:
             </b>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-              <li>Click "View All Commits" and ensure your branch is up to date.</li>
+              <li>
+                Click "View All Commits" and ensure your branch is up to date.
+              </li>
               <li>Click “Sync” if shown on the IDE of working branch.</li>
-              <li><code className="cmd">** Note: Sync should never be applied on main branch.</code></li>
+              <li>
+                <code className="cmd">
+                  ** Note: Sync should never be applied on main branch.
+                </code>
+              </li>
             </ul>
           </li>
           <li>
@@ -416,10 +432,17 @@ export default function GitGuide() {
               <FaPenFancy /> Important Notes:
             </b>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-              <li>If your branch is up to date, the message 'Already up to date' will appear.</li>
+              <li>
+                If your branch is up to date, the message 'Already up to date'
+                will appear.
+              </li>
               <li>If there are updates, they will be pulled automatically.</li>
-              <li>If there are conflicts, Git will prompt you to resolve them.</li>
-              <li>If a merge is required, Git will request a merge commit message.</li>
+              <li>
+                If there are conflicts, Git will prompt you to resolve them.
+              </li>
+              <li>
+                If a merge is required, Git will request a merge commit message.
+              </li>
             </ul>
           </li>
           <li>
@@ -451,52 +474,148 @@ export default function GitGuide() {
             </b>
             <br />
             Navigate to "Git Changes" in Visual Studio.
-            <br />
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>M – Modified file</li>
+              <li>D – Deleted file</li>
+              <li>A – Added file</li>
+            </ul>
             Stage changes by clicking "+" and enter a descriptive commit
             message.
             <br />
             Click "Commit Staged" to save changes locally.
+          </li>
+          <li>
+            <b>
+              <FaArrowCircleRight /> Reference Image:
+            </b>
+            <br />
+            <br></br>
+            <CarouselComponentDA />
           </li>
         </ol>
 
         <h2>
           <FaUpload className="icon" /> Post Activity to Push Changes to Main
         </h2>
+        <h2>
+          <FaClipboardList className="icon" /> Overview
+        </h2>
+        <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+          <li>Repeat Fetch and Pull Before Final Commit</li>
+          <li>
+            Before committing the final changes, ensure your branch has the
+            latest updates from main. This helps avoid merge conflicts with
+            changes from other team members.
+          </li>
+          <li>In the Git Changes window, review your changes.</li>
+          <li>
+            Add a clear and descriptive commit message, then click Commit All.
+          </li>
+          <li>
+            After committing, click Push to send your changes to the remote
+            repository.
+          </li>
+          <li>
+            Go to GitHub and create a Pull Request (PR), if needed, from your
+            working branch to the main branch.
+          </li>
+          <li>After review and approval, merge the PR into the main branch.</li>
+        </ul>
         <ol>
           <li>
             <b>
               <FaSyncAlt /> Fetch and Pull Again:
             </b>
             <br />
-            Before finalizing, ensure your branch has the latest updates from
-            "main."
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>
+                Before finalizing, ensure your branch has the latest updates
+                from "main."
+              </li>
+              <li>
+                Switch to working branch and click on three dots … and pick Open
+                in command prompt.
+              </li>
+              <li>
+                Type “git pull origin main” in the command prompt and press
+                Enter.
+              </li>
+            </ul>
           </li>
+          <b>
+            <FaPenFancy /> Important Notes:
+          </b>
+          <br />
+          <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+            <li>It shows the solution is upto date.</li>
+            <li>
+              If your branch is up to date, the message 'Already up to date'
+              will appear.
+            </li>
+            <li>If there are updates, they will be pulled automatically.</li>
+            <li>
+              If there are conflicts, Git will prompt you to resolve them.
+            </li>
+            <li>
+              If a merge is required, Git will request a merge commit message.
+            </li>
+            <li>
+              Complete the merge if required and proceed with the development
+              work.
+            </li>
+            <li>Close the command prompt.</li>
+          </ul>
           <li>
             <b>
               <FaUpload /> Push Changes:
             </b>
             <br />
-            Click "Push" to upload changes to the remote repository.
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>
+                {" "}
+                Click “Push” to send the changes from working branch to main
+                branch.
+              </li>
+            </ul>
           </li>
           <li>
             <b>
               <FaCodeBranch /> Create a Pull Request (PR):
             </b>
             <br />
-            Go to GitHub, navigate to your repository, and click "Compare & pull
-            request."
-            <br />
-            Enter a title and description, then click "Create pull request."
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>
+                {" "}
+                Go to GitHub, navigate to your repository, and click "Compare &
+                pull request."
+              </li>
+              <li>
+                Enter a title and description, then click "Create pull request."
+              </li>
+            </ul>
           </li>
           <li>
             <b>
               <FaCheckCircle /> Merge PR:
             </b>
             <br />
-            Review the PR and click "Merge pull request" if there are no
-            conflicts.
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>
+                Review the PR and click "Merge pull request" if there are no
+                conflicts.
+              </li>
+              <li>Otherwise review with concerned team members before merging to the main branch.</li>
+              <li>Confirm the merge to update the main branch.</li>
+              <li>All the messages/ title entered will be saved for the version of checkin into GitHub.</li>
+            </ul>
+          </li>
+          <li>
+            <b>
+              <FaArrowCircleRight /> Reference Image:
+            </b>
             <br />
-            Confirm the merge to update the main branch.
+            <br></br>
+            <CarouselComponentPA />
           </li>
         </ol>
 
