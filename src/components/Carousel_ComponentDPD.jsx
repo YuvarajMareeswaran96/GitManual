@@ -31,7 +31,7 @@ function CarouselComponentDPD() {
         />
         <Carousel.Caption className="custom-caption">
           <h3>Step 2</h3>
-          <p>Clcik Pull</p>
+          <p>Click Pull</p>
         </Carousel.Caption>
       </Carousel.Item>
 
