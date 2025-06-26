@@ -57,6 +57,13 @@ export default function GitGuide() {
           for daily development activities, collaboration with team members, and
           best practices for pushing changes to the main repository.
         </p>
+        <p style={{ color: "#7bff00" }}>
+          <strong>
+            Each step provides clear guidance through a reference image
+            carousel, making it one of the easiest ways to add your project to
+            Git.
+          </strong>
+        </p>
 
         <h2>
           <FaDownload className="icon" /> Steps in Installing Git on Windows
@@ -208,7 +215,6 @@ export default function GitGuide() {
           <FaUpload className="icon" /> Push Solution to Repository
         </h2>
         <ol>
-          <img src={vslogo} alt="Visual Studio Logo" className="inline-image" />
           <li>
             <b>
               <FaCodeBranch /> Clone the Repository:
@@ -257,6 +263,24 @@ export default function GitGuide() {
                 Rename <code className="cmd">gitignore</code> to{" "}
                 <code className="cmd">.gitignore</code> (if needed).
               </li>
+              <li>
+                <a
+                  href="/files/Gitignore_Templates.zip"
+                  download
+                  style={{
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    color: "#1d4ed8", // text color
+                    fontWeight: "500",
+                  }}
+                >
+                  <FaDownload style={{ color: "#7bff00", fontSize: "18px" }} />
+                  Download <code>.gitignore</code> ZIP , make the changes in the files if you want. 
+                </a>
+              </li>
+
               <li>Open the solution from the newly created folder.</li>
             </ul>
           </li>
@@ -604,9 +628,15 @@ export default function GitGuide() {
                 Review the PR and click "Merge pull request" if there are no
                 conflicts.
               </li>
-              <li>Otherwise review with concerned team members before merging to the main branch.</li>
+              <li>
+                Otherwise review with concerned team members before merging to
+                the main branch.
+              </li>
               <li>Confirm the merge to update the main branch.</li>
-              <li>All the messages/ title entered will be saved for the version of checkin into GitHub.</li>
+              <li>
+                All the messages/ title entered will be saved for the version of
+                checkin into GitHub.
+              </li>
             </ul>
           </li>
           <li>
