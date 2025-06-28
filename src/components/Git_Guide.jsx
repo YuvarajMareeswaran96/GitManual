@@ -12,6 +12,7 @@ import {
   FaUpload,
   FaPenFancy,
   FaArrowCircleRight,
+  FaUndo,
 } from "react-icons/fa";
 import "./GitGuide.css";
 import vslogo from "../assets/vslogo.png";
@@ -24,6 +25,8 @@ import CarouselComponentCT from "./Carousel_ComponentCT";
 import CarouselComponentDPD from "./Carousel_ComponentDPD";
 import CarouselComponentDA from "./Carousel_ComponentDA";
 import CarouselComponentPA from "./Carousel_ComponentPA";
+import CarouselComponentMC from "./Carousel_ComponentMC";
+import CarouselComponentRC from "./Carousel_ComponentRC";
 
 // Placeholder images URLs (replace with your own images or local imports)
 const gitLogo =
@@ -265,7 +268,7 @@ export default function GitGuide() {
               </li>
               <li>
                 <a
-                  href="/files/Gitignore_Templates.zip"
+                  href="/Gitignore_Templates.zip"
                   download
                   style={{
                     textDecoration: "none",
@@ -277,7 +280,8 @@ export default function GitGuide() {
                   }}
                 >
                   <FaDownload style={{ color: "#7bff00", fontSize: "18px" }} />
-                  Download <code>.gitignore</code> ZIP , make the changes in the files if you want. 
+                  Download <code>.gitignore</code> ZIP , make the changes in the
+                  files if you want.
                 </a>
               </li>
 
@@ -646,6 +650,167 @@ export default function GitGuide() {
             <br />
             <br></br>
             <CarouselComponentPA />
+          </li>
+        </ol>
+
+        <h2>
+          <FaCodeBranch className="icon" /> Merge Message
+        </h2>
+        <ol>
+          <p style={{ color: "#7bff00" }}>
+            <strong>
+              Sometimes you get a merge message without conflicts because:
+            </strong>
+          </p>
+          <b>
+            <FaSyncAlt /> Git automatically combines the changes from both
+            branches when :
+          </b>
+          <ul
+            ul
+            style={{
+              listStyleType: "disc",
+              paddingLeft: "1.5rem",
+              color: "#7bff00",
+            }}
+          >
+            <li>The files modified in each branch do not overlap, or</li>
+            <li>The changes are in different lines of the same file.</li>
+          </ul>
+          <b>
+            <FaSyncAlt /> In this case, Git completes the merge automatically,
+            but it still creates a merge commit message to record that :
+          </b>
+          <ul
+            ul
+            style={{
+              listStyleType: "disc",
+              paddingLeft: "1.5rem",
+              color: "#7bff00",
+            }}
+          >
+            <li>Give a meaningful message, Click Commit Staged</li>
+          </ul>
+        </ol>
+
+        <h2>
+          <FaCodeBranch className="icon" /> Merge Conflicts
+        </h2>
+        <p style={{ color: "#7bff00" }}>
+          <strong>
+            We perform merges primarily for two reasons:-
+            <br></br>
+            To keep our branch up to date and to prevent conflicts later.
+          </strong>
+        </p>
+        <ol>
+          <li>
+            <b>
+              <FaSyncAlt /> After pulled the updated changes from remote to your
+              working branch:
+            </b>
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>
+                You and your teammate edited the same file/project on different
+                branches.
+              </li>
+              <li>You push your changes.</li>
+              <li>Your teammate also pushed different changes.</li>
+              <li>
+                When you pull from the remote, if Git cannot auto-resolve
+                changes, you get a merge conflict.
+              </li>
+              <li>
+                At that time, it prompts you to merge the changes manually.
+              </li>
+            </ul>
+          </li>
+          <b>
+            <FaPenFancy /> Here the following steps:
+          </b>
+          <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+            <li>
+              The Git Changes window shows a list of files with conflicts under
+              Unmerged Changes . To start resolving conflicts, double-click a
+              file. Or if you have a file with conflicts opened in the editor,
+              you can select Open Merge Editor .
+            </li>
+            <li>
+              In Merge Editor, start resolving your conflict by using any of the
+              following methods
+            </li>
+            <p style={{ color: "#7bff00" }}>
+              <strong>
+                1. Go over your conflicts line by line, and choose between
+                keeping the right or the left side by selecting the checkboxes.
+              </strong>
+            </p>
+            <p style={{ color: "#7bff00" }}>
+              <strong>
+                2. Select the Take Incoming button (or press F10 ) to accept all
+                the incoming changes, or Take Current button (or press F11) to
+                keep your current version of all conflicting changes. You can do
+                the same thing by selecting one of the checkboxes at the top of
+                either side-by-side frame.{" "}
+              </strong>
+            </p>
+            <p style={{ color: "#7bff00" }}>
+              <strong>3. Manually edit your code in the Result window.</strong>
+            </p>
+            <li>
+              When you're done resolving the merge conflicts, select Accept
+              Merge . Repeat this process for all conflicting files.
+            </li>
+            <li>
+              Use the Git Changes window to create a merge commit and resolve
+              the conflict.
+            </li>
+          </ul>
+          <li>
+            <b>
+              <FaArrowCircleRight /> Reference Image:
+            </b>
+            <br />
+            <br></br>
+            <CarouselComponentMC />
+          </li>
+        </ol>
+
+        <h2>
+          <FaUndo  className="icon" /> How to Revert the changes
+        </h2>
+        <ol>
+          <li>
+            <b>
+              <FaSyncAlt /> Open Git Bash :- Change your directory to your project folder - cd path/to/your/project
+            </b>
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>
+                  Step 1 : Make sure you're in the main branch - git checkout main
+              </li>
+              <li>
+                  Step 2 : Pull the latest changes (optional but recommended) - git pull origin main
+              </li>
+              <li>
+                  Step 3 : Revert the merge pull request (For Example) - git revert -m 1 f2ac29a,<br></br>
+                           Revert just Commit : (For Example) - git revert 9c3b0c6
+              </li>
+              <li>
+                 Step 4: Confirm commit message (For Example) - Revert "Commit_25_Core_CavityInsert_Yelowclr...", OR<br></br>
+                 if you want to Skip commit message prompts, use a code like this - git revert --no-edit -m 1 f2ac29a -m 1 abc1234 -m 1 def5678
+              </li>
+              <li>
+                Step 5: Push the revert to remote (GitHub) - git push origin main
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>
+              <FaArrowCircleRight /> Reference Image:
+            </b>
+            <br />
+            <br></br>
+            <CarouselComponentRC />
           </li>
         </ol>
 
