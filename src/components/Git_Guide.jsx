@@ -267,21 +267,79 @@ export default function GitGuide() {
                 <code className="cmd">.gitignore</code> (if needed).
               </li>
               <li>
+                These frameworks/tools generate a .gitignore automatically
+                during project creation:
+              </li>
+              <ul>
+                <li>
+                  🖌️ <strong>Frontend Frameworks</strong>
+                  <ul>
+                    <li>✅ React (create-react-app)</li>
+                    <li>✅ Next.js (npx create-next-app)</li>
+                    <li>✅ Angular CLI</li>
+                    <li>✅ Vue CLI (vue create)</li>
+                    <li>✅ SvelteKit</li>
+                  </ul>
+                </li>
+                <li>
+                  🖥️ <strong>Backend Frameworks</strong>
+                  <ul>
+                    <li>✅ Node.js (Express, NestJS, Fastify)</li>
+                    <li>✅ Django (django-admin startproject)</li>
+                    <li>✅ Ruby on Rails</li>
+                    <li>✅ Laravel (PHP)</li>
+                    <li>✅ ASP.NET Core</li>
+                    <li>✅ Spring Boot (Spring Initializr)</li>
+                    <li>✅ Flask (cookiecutter templates)</li>
+                  </ul>
+                </li>
+                <li>
+                  📱 <strong>Mobile Frameworks</strong>
+                  <ul>
+                    <li>✅ React Native (npx react-native init)</li>
+                    <li>✅ Flutter (flutter create)</li>
+                    <li>✅ Expo</li>
+                    <li>✅ Android Studio (Java/Kotlin)</li>
+                    <li>✅ Xcode (Objective-C/Swift)</li>
+                  </ul>
+                </li>
+                <li>
+                  🎮 <strong>Game Development</strong>
+                  <ul>
+                    <li>✅ Unity</li>
+                    <li>✅ Unreal Engine</li>
+                  </ul>
+                </li>
+                <li>
+                  ⚙️ <strong>Other Tools</strong>
+                  <ul>
+                    <li>✅ Visual Studio Projects (.NET, C#, F#)</li>
+                    <li>✅ GitHub Actions workflows</li>
+                    <li>✅ Terraform</li>
+                    <li>✅ Hugo (static sites)</li>
+                    <li>✅ Jekyll (GitHub Pages)</li>
+                    <li>✅ LaTeX</li>
+                    <li>✅ Python (pipenv/poetry templates)</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <li>
                 <a
-                  href="/Gitignore_Templates.zip"
+                  href="/GitManual/Gitignore_Templates.zip"
                   download
                   style={{
                     textDecoration: "none",
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
-                    color: "#1d4ed8", // text color
+                    color: "#1d4ed8",
                     fontWeight: "500",
                   }}
                 >
                   <FaDownload style={{ color: "#7bff00", fontSize: "18px" }} />
-                  Download <code>.gitignore</code> ZIP , make the changes in the
-                  files if you want.
+                  Download <code>.gitignore</code> ZIP, make changes if you
+                  want.
                 </a>
               </li>
 
@@ -777,30 +835,36 @@ export default function GitGuide() {
         </ol>
 
         <h2>
-          <FaUndo  className="icon" /> How to Revert the changes
+          <FaUndo className="icon" /> How to Revert the changes
         </h2>
         <ol>
           <li>
             <b>
-              <FaSyncAlt /> Open Git Bash :- Change your directory to your project folder - cd path/to/your/project
+              <FaSyncAlt /> Open Git Bash :- Change your directory to your
+              project folder - cd path/to/your/project
             </b>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
               <li>
-                  Step 1 : Make sure you're in the main branch - git checkout main
+                Step 1 : Make sure you're in the main branch - git checkout main
               </li>
               <li>
-                  Step 2 : Pull the latest changes (optional but recommended) - git pull origin main
+                Step 2 : Pull the latest changes (optional but recommended) -
+                git pull origin main
               </li>
               <li>
-                  Step 3 : Revert the merge pull request (For Example) - git revert -m 1 f2ac29a,<br></br>
-                           Revert just Commit : (For Example) - git revert 9c3b0c6
+                Step 3 : Revert the merge pull request (For Example) - git
+                revert -m 1 f2ac29a,<br></br>
+                Revert just Commit : (For Example) - git revert 9c3b0c6
               </li>
               <li>
-                 Step 4: Confirm commit message (For Example) - Revert "Commit_25_Core_CavityInsert_Yelowclr...", OR<br></br>
-                 if you want to Skip commit message prompts, use a code like this - git revert --no-edit -m 1 f2ac29a -m 1 abc1234 -m 1 def5678
+                Step 4: Confirm commit message (For Example) - Revert
+                "Commit_25_Core_CavityInsert_Yelowclr...", OR<br></br>
+                if you want to Skip commit message prompts, use a code like this
+                - git revert --no-edit -m 1 f2ac29a -m 1 abc1234 -m 1 def5678
               </li>
               <li>
-                Step 5: Push the revert to remote (GitHub) - git push origin main
+                Step 5: Push the revert to remote (GitHub) - git push origin
+                main
               </li>
             </ul>
           </li>
