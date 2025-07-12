@@ -13,6 +13,7 @@ import {
   FaPenFancy,
   FaArrowCircleRight,
   FaUndo,
+  FaArchive,
 } from "react-icons/fa";
 import "./GitGuide.css";
 import vslogo from "../assets/vslogo.png";
@@ -27,6 +28,7 @@ import CarouselComponentDA from "./Carousel_ComponentDA";
 import CarouselComponentPA from "./Carousel_ComponentPA";
 import CarouselComponentMC from "./Carousel_ComponentMC";
 import CarouselComponentRC from "./Carousel_ComponentRC";
+import CarouselComponentGST from "./Carousel_ComponentGST";
 
 // Placeholder images URLs (replace with your own images or local imports)
 const gitLogo =
@@ -754,14 +756,14 @@ export default function GitGuide() {
         <h2>
           <FaCodeBranch className="icon" /> Merge Conflicts
         </h2>
-        <p style={{ color: "#7bff00" }}>
-          <strong>
-            We perform merges primarily for two reasons:-
-            <br></br>
-            To keep our branch up to date and to prevent conflicts later.
-          </strong>
-        </p>
         <ol>
+          <p style={{ color: "#7bff00" }}>
+            <strong>
+              We perform merges primarily for two reasons:-
+              <br></br>
+              To keep our branch up to date and to prevent conflicts later.
+            </strong>
+          </p>
           <li>
             <b>
               <FaSyncAlt /> After pulled the updated changes from remote to your
@@ -875,6 +877,68 @@ export default function GitGuide() {
             <br />
             <br></br>
             <CarouselComponentRC />
+          </li>
+        </ol>
+
+        <h2>
+          <FaArchive className="icon" /> Git Stash
+        </h2>
+        <ol>
+          <p style={{ color: "#7bff00" }}>
+            <strong>
+              Git stash temporarily shelves (or stashes) changes you've made to
+              your working copy so you can work on something else, and then come
+              back and re-apply them later on. Stashing is handy if you need to
+              quickly switch context and work on something else, but you're
+              mid-way through a code change and aren't quite ready to commit.
+            </strong>
+          </p>
+          <li>Go to Git changes window Ctrl + Alt + F7.</li>
+          <li>
+            Now press the drop down key near Commit All or Commit staged button
+            to see the stashing options.
+          </li>
+          <li>
+            <b>Option 1:</b> Only if you want to stash untracked files like Git
+            ignored files or Files which are not included into project then go
+            for this option.
+          </li>
+          <li>
+            <b>Option 2:</b> You can use this option Stash All and Keep Staged
+            (--keep-index) by default.
+          </li>
+          <li>You can keep/save multiple stashes.</li>
+          <li>
+            <b>Retrieving a stash:</b> You have two options, either to Apply or
+            Pop.
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>Apply will retrieve the stash but wont delete the stash.</li>
+              <li>
+                Pop (Apply + Delete) will retrieve the stash and will also
+                delete it.
+              </li>
+            </ul>
+            Again, Under Apply/Pop you gonna see two options:
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <li>
+                <b>Apply/Pop and restore staged (--index):</b> Always use this option by default. This means while stashing if
+                you had some files in changes and some files in staged, it'll be
+                restored as such to changes and staged.
+              </li>
+              <li>
+                <b>Apply/Pop all as unstaged:</b> If you use this option, while stashing if you had some files in
+                changes and some files in staged, all of these files now will be
+                clubbed to Changes.
+              </li>
+            </ul>
+          </li>
+           <li>
+            <b>
+              <FaArrowCircleRight /> Reference Image:
+            </b>
+            <br />
+            <br></br>
+            <CarouselComponentGST />
           </li>
         </ol>
 
