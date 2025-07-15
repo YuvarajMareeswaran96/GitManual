@@ -49,7 +49,7 @@ export default function GitGuide() {
         <p className="credits">
           <em>
             Prepared by: Yuvaraj Mareeswaran <br />
-            Reviewed by: Suja Kanakaraj
+            Reviewed by: Vinoth Kumar Balakrishnan, Prem Kumar Vairavan
           </em>
         </p>
 
