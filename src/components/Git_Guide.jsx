@@ -249,7 +249,10 @@ export default function GitGuide() {
                 created.
               </li>
               <li>
-                Delete <code className="cmd">.vs</code> folder.
+                Delete the <code className="cmd">.vs</code> folder the first
+                time only. This folder is generated with every build, but after
+                the initial deletion, it will be automatically ignored by Git
+                due to the .gitignore file.
               </li>
               <li>Create a new folder and rename it.</li>
               <li>
@@ -678,6 +681,14 @@ export default function GitGuide() {
                 pull request."
               </li>
               <li>
+                Click the "Settings" icon near the Reviewers section on the
+                right side. Type the Reviewer name in the text box to find the
+                list of team members who are part of the repository.
+              </li>
+              <li>
+                Set your Reviewers, if needed. We can set up to 15 Reviewers.
+              </li>
+              <li>
                 Enter a title and description, then click "Create pull request."
               </li>
             </ul>
@@ -690,12 +701,23 @@ export default function GitGuide() {
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
               <li>
                 Review the PR and click "Merge pull request" if there are no
-                conflicts.
+                conflicts. It's your own and you can merge it directly. Skip the next step and continue directly with the one after it.
               </li>
               <li>
                 Otherwise review with concerned team members before merging to
                 the main branch.
               </li>
+              <b>
+                <FaPenFancy /> Important Notes: If review is required.
+              </b>
+              <br />
+              <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                <li>Team members will review the PR. They may leave comments or request changes.</li>
+                <li>If changes are requested: Make changes in the same branch and push them to the remote repository.</li>
+                <li>Changes will automatically update the PR.</li>
+                <li>Once reviewers approve the PR: GitHub will show a green “Approved” status.</li>
+                <li>Continue with further steps to merge the PR.</li>
+              </ul>
               <li>Confirm the merge to update the main branch.</li>
               <li>
                 All the messages/ title entered will be saved for the version of
@@ -921,18 +943,19 @@ export default function GitGuide() {
             Again, Under Apply/Pop you gonna see two options:
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
               <li>
-                <b>Apply/Pop and restore staged (--index):</b> Always use this option by default. This means while stashing if
-                you had some files in changes and some files in staged, it'll be
-                restored as such to changes and staged.
+                <b>Apply/Pop and restore staged (--index):</b> Always use this
+                option by default. This means while stashing if you had some
+                files in changes and some files in staged, it'll be restored as
+                such to changes and staged.
               </li>
               <li>
-                <b>Apply/Pop all as unstaged:</b> If you use this option, while stashing if you had some files in
-                changes and some files in staged, all of these files now will be
-                clubbed to Changes.
+                <b>Apply/Pop all as unstaged:</b> If you use this option, while
+                stashing if you had some files in changes and some files in
+                staged, all of these files now will be clubbed to Changes.
               </li>
             </ul>
           </li>
-           <li>
+          <li>
             <b>
               <FaArrowCircleRight /> Reference Image:
             </b>

@@ -15,6 +15,7 @@ import Image44 from '../assets/Image44.png';
 import Image45 from '../assets/Image45.png';
 import Image46 from '../assets/Image46.png';
 import Image47 from '../assets/Image47.png';
+import Image60 from '../assets/Image60.png';
 
 function CarouselComponentPA() {
   return (
@@ -130,11 +131,23 @@ function CarouselComponentPA() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={Image43}
+          src={Image60}
           alt="Create Repo"
         />
         <Carousel.Caption className="custom-caption">
           <h3>Step 10</h3>
+          <p>If you set the Reviewer, refer this image for guidance. Otherwise, proceed to the next step.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={Image43}
+          alt="Create Repo"
+        />
+        <Carousel.Caption className="custom-caption">
+          <h3>Step 11</h3>
           <p>Enter a title and description, then click "Create pull request."</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -146,7 +159,7 @@ function CarouselComponentPA() {
           alt="Create Repo"
         />
         <Carousel.Caption className="custom-caption">
-          <h3>Step 11</h3>
+          <h3>Step 12</h3>
           <p>Review the PR and click "Merge pull request" if there are no conflicts.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -158,7 +171,7 @@ function CarouselComponentPA() {
           alt="Create Repo"
         />
         <Carousel.Caption className="custom-caption">
-          <h3>Step 12</h3>
+          <h3>Step 13</h3>
           <p>Confirm the merge to update the main branch.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -170,7 +183,7 @@ function CarouselComponentPA() {
           alt="Create Repo"
         />
         <Carousel.Caption className="custom-caption">
-          <h3>Step 13</h3>
+          <h3>Step 14</h3>
           <p>Once Merged, we get like this</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -182,7 +195,7 @@ function CarouselComponentPA() {
           alt="Create Repo"
         />
         <Carousel.Caption className="custom-caption">
-          <h3>Step 14</h3>
+          <h3>Step 15</h3>
           <p>All the messages/ title entered will be saved for the version of checkin into GitHub.</p>
         </Carousel.Caption>
       </Carousel.Item>
