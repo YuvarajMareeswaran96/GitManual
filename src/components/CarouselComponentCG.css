@@ -38,16 +38,50 @@
   font-size: 1.5vw;
 }
 
-/* Tablet (<= 768px) */
-@media (max-width: 768px) {
-  .custom-caption h3 {
-    font-size: 1.5rem;
+/* Tablet (<= 900px) */
+@media (max-width: 900px) {
+  .custom-caption {
+    max-width: 98vw;
+    padding: 10px 10px 12px 10px;
   }
-
+  .custom-caption h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    padding: 6px 10px;
+  }
   .custom-caption p {
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    padding: 5px 8px;
   }
 }
+
+/* Mobile (<= 600px) */
+@media (max-width: 600px) {
+  .custom-caption {
+    max-width: 99vw;
+    padding: 7px 3vw 9px 3vw;
+    border-radius: 8px;
+    bottom: 1.5vh !important;
+  }
+  .custom-caption h3, .custom-caption p {
+    font-size: clamp(0.95rem, 4vw, 1.05rem);
+    padding: 3px 6px;
+  }
+}
+
+/* Mobile XS (<= 400px) */
+@media (max-width: 400px) {
+  .custom-caption {
+    font-size: 0.85rem;
+    padding: 5px 2vw 7px 2vw;
+    border-radius: 7px;
+    bottom: 0.8vh !important;
+  }
+  .custom-caption h3, .custom-caption p {
+    font-size: 0.95rem;
+    padding: 2px 4px;
+  }
+}
+
 
 /* Mobile (<= 480px) */
 @media (max-width: 480px) {

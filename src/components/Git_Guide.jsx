@@ -180,14 +180,7 @@ export default function GitGuide() {
               rel="noreferrer"
               className="link"
             >
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                https://github.com
-              </a>
+              https://github.com
             </a>
           </li>
           <li>
@@ -749,7 +742,6 @@ export default function GitGuide() {
             branches when :
           </b>
           <ul
-            ul
             style={{
               listStyleType: "disc",
               paddingLeft: "1.5rem",
@@ -764,7 +756,6 @@ export default function GitGuide() {
             but it still creates a merge commit message to record that :
           </b>
           <ul
-            ul
             style={{
               listStyleType: "disc",
               paddingLeft: "1.5rem",

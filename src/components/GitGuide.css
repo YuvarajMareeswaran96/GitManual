@@ -10,25 +10,30 @@
   min-height: 100vh;
   background: #121212;
   color: #E0E0E0;
-  padding: 2rem 3rem;
+  padding: clamp(0.5rem, 3vw, 2.5rem) clamp(1vw, 5vw, 3rem);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 
 /* ========== MAIN CONTAINER ========== */
 .guide-container {
   width: 100%;
-  max-width: 1800px;
-  min-width: 280px;
+  max-width: 96vw;
+  min-width: 0;
   background: #1e1e1e;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  padding: 2rem 3rem;
+  padding: clamp(0.7rem, 3vw, 2.2rem) clamp(2vw, 6vw, 3rem);
   opacity: 1;
   transition: box-shadow 0.3s ease;
   animation: fadeIn 1s ease forwards;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 
 /* Fade-in animation */
@@ -194,26 +199,55 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
-  .guide-wrapper {
-    padding: 1rem 1.2rem;
-  }
-
+@media (max-width: 1200px) {
   .guide-container {
-    padding: 1.5rem 1.2rem;
-  }
-
-  .guide-container p,
-  .guide-container li {
-    font-size: 0.95rem;
-  }
-
-  code,
-  pre {
-    font-size: 0.85rem;
-  }
-
-  .icon {
-    font-size: 1.5rem;
+    max-width: 99vw;
+    padding: clamp(0.7rem, 2vw, 1.5rem) clamp(2vw, 4vw, 2rem);
   }
 }
+@media (max-width: 900px) {
+  .guide-wrapper {
+    padding: 1rem 1vw;
+  }
+  .guide-container {
+    max-width: 100vw;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1vw, 3vw, 1.5rem);
+  }
+  .guide-container h1 {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+  .guide-container h2 {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+}
+@media (max-width: 600px) {
+  .guide-wrapper {
+    padding: 0.5rem 0.2rem;
+  }
+  .guide-container {
+    padding: clamp(0.3rem, 2vw, 0.7rem) clamp(1vw, 2vw, 0.8rem);
+    border-radius: 7px;
+  }
+  .guide-container h1 {
+    font-size: clamp(1rem, 7vw, 1.5rem);
+  }
+  .guide-container h2 {
+    font-size: clamp(0.95rem, 5vw, 1.1rem);
+  }
+  .guide-container p, .guide-container li {
+    font-size: 0.92rem;
+  }
+}
+@media (max-width: 400px) {
+  .guide-container {
+    padding: 0.2rem 0.2rem;
+    border-radius: 5px;
+  }
+  .guide-container h1, .guide-container h2 {
+    font-size: 1rem;
+  }
+  .guide-container p, .guide-container li {
+    font-size: 0.85rem;
+  }
+}
+
